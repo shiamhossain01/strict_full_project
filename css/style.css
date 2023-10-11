@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+header{
+    padding: 20px 0;
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.logo{
+    width: 15%;
+    /* border: 1px solid red; */
+
+}
+.logo a{
+
+}
+.logo img{
+    width: 100%;
+
+}
+nav{
+    width: 40%;
+
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+nav ul li{
+    list-style: none;
+
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2d3950;
+    text-transform: uppercase;
+
+}
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #48baff;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+
+
+/* banner section start */
+.banner{
+    min-height: 99vh;
+    width: 100%;
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+}
+.banner_contant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   /* position: relative; */
+
+}
+.banner_contant h1{
+    font-size: 120px;
+    font-weight: 700;
+    color: #ffffff;
+
+}
+.banner_contant span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #48baff;
+
+}
+.banner_contant p{
+    font-size: 20px;
+    color: #ffffff;
+    padding: 20px 0 80px;
+
+}
+.banner_contant a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #48baff;
+    padding: 15px 30px;
+    transition: .5s all ease-in-out;
+
+}
+.banner_contant a:hover{
+    background: #48baff;
+}
+.banner i{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-40%,-50%);
+    font-size: 20px;
+    color: #fff;
+    animation: updown 1s linear infinite;
+    animation-direction: alternate;
+
+}
+@keyframes updown{
+    0%{
+        bottom: 40px;
+
+    }
+    100%{
+        bottom: 15px;
+    }
+}
+/* banner section end */
+
+
+
+/* simple section start */
+.simple{
+    padding: 60px 0;
+    background: #f6f9f9;
+}
+.simple_contant{
+    text-align: center;
+}
+.simple_contant h1{
+    font-size: 40px;
+    color: #2d3950;
+}
+.simple_contant p{
+    font-size: 16px;
+    color: #999999;
+    padding-top: 20px;
+}
+/* simple section end */
+
+
+
+
+/* icon section start */
+.icon{
+    padding: 60px 0;
+
+}
+.icon_contant{
+   width: 32%;
+   text-align: center;
+
+}
+.icon_img{
+    width: 80px;
+    height: 80px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+0,5fc3ff+50,48baff+50,5fc3ff+100 */
+    background: linear-gradient(to right,  #48baff 0%,#5fc3ff 50%,#48baff 50%,#5fc3ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.icon_contant h3{
+    font-size: 22px;
+    color: #2d3950;
+    padding: 20px 0;
+
+}
+.icon_contant p{
+    font-size: 16px;
+    color: #999999;
+
+}
+/* icon section end */
+
+
+
+
+
+/* service section start */
+.service{
+    padding: 60px 0;
+    background: #f6f9f9;
+}
+.service_text{
+    text-align: center;
+
+}
+.service_text h1{
+    font-size: 41px;
+    color: #2d3950;
+
+}
+.service_text p{
+    font-size: 16px;
+    color: #909090;
+    padding: 20px 0 40px;
+
+}
+.service_contant{
+    width: 32%;
+    /* border: 1px solid red; */
+    margin-top: 15px;
+    position: relative;
+}
+.service_contant img{
+    width: 100%;
+    display: block;
+}
+.service_contant::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #48baff;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    transition: .5s all ease-in-out;
+}
+.service_contant:hover::after{
+    width: 50%;
+}
+.service_contant::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #48baff;
+    bottom: 0;
+    right: 0;
+    opacity: .5;
+    transition: .5s all ease-in-out;
+}
+.service_contant:hover::before{
+    width: 50%;
+}
+.service_icon{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 1;
+    transition: .5s all ease-in-out;
+}
+.service_icon ul{
+    display: flex;
+}
+.service_icon ul li{
+    list-style: none;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 5px;
+    transition: .5s all ease-in-out;
+}
+.service_icon ul li a{
+    font-size: 20px;
+    color: #fff;
+}
+.service_contant:hover .service_icon{
+    opacity: 1;
+    top: 50%;
+}
+.service_icon ul li:hover{
+    background: #48baff;
+    border: 1px solid #48baff;
+}
+/* service section end */
+
+
+
+
+/* sign_up section start */
+.sign_up{
+    min-height: 50vh;
+    width: 100%;
+    background-image: url(../images/email_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding: 60px 0 80px;
+
+}
+.sign_up::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2d3950;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    z-index: -1;
+
+}
+.sign_up_header{
+    text-align: center;
+}
+.sign_up_header h1{
+    font-size: 41px;
+    color: #fff;
+
+}
+.sign_up_header p{
+    font-size: 16px;
+    color: #999999;
+    padding: 20px 0 30px;
+
+}
+.container1{
+    width: 40%;
+    margin: auto;
+    /* padding: 60px 0; */
+
+}
+.sing_up_contant{
+    
+
+}
+.sing_up_contant form input[type="text"], .sing_up_contant form input[type="email"]{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border: 1px solid #fff;
+    padding: 10px 5px;
+    margin: 10px 0;
+    outline: none;
+    color: #999999;
+
+}
+.sing_up_contant form textarea{
+    width: 100%;
+    background: transparent;
+    border: none;
+    border: 1px solid #fff;
+    padding: 10px 5px;
+    outline: none;
+    color: #999999;
+
+}
+.sing_up_contant form textarea::placeholder{
+    /* color: #fff; */
+    
+}
+.sing_up_contant form input[type="submit"]{
+    background: transparent;
+    border: 1px solid #48baff;
+    padding: 8px 25px;
+    color: #fff;
+    margin-top: 10px;
+    text-transform: capitalize;
+    transition: .5s all ease-in-out;
+}
+.sing_up_contant form input[type="checkbox"]{
+    
+
+}
+.sing_up_contant form input[type="submit"]:hover{
+    background: #48baff;
+}
+.submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+.left p{
+    font-size: 14px;
+    padding-left: 10px;
+    color: #fff;
+}
+/* sign_up section end */
+
+
+
+
+
+/* footer section start */
+footer{
+    background: #f6f9f9;
+    padding: 20px 0;
+}
+.footer_contant{
+    width: 80%;
+    margin: auto;
+}
+.last_part{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left1 p{
+    color: black;
+}
+.right1 ul{
+    display: flex;
+    justify-content: space-between;
+}
+.right1 ul li{
+    list-style: none;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #48baff;
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+}
+.right1 ul li a{
+    color: #fff;
+}
+/* footer section end */
